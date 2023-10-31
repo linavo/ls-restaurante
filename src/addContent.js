@@ -111,7 +111,7 @@ function addContent() {
   const footer2AndGitPic = document.createElement("div");
   const githubLink = document.createElement("a");
 
-  githubLink.href = "";
+  githubLink.href = "testing";
   footer2AndGitPic.classList.add("footerSpan");
   githubPic.src = githubLogo;
   githubPic.classList.add("github");
