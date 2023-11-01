@@ -6,7 +6,7 @@ import { addJoin } from "./addJoin";
 // window.addEventListener("load", addContent);
 
 // addContent();
-addJoin();
+addContent();
 
 let homeTab = document.querySelector(".homeTab");
 homeTab.addEventListener("click", addContent);
