@@ -70,7 +70,6 @@
     width: 100vw;
     background-color: #fff;
     display: grid;
-    grid-template-rows: 2fr 4fr;
     grid-template-columns: 1fr 3fr 1fr;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.109);
     .quote {
@@ -91,6 +90,7 @@
       margin-bottom: 3rem;
     }
     .formatMenuBar {
+      padding: 2rem;
       grid-column: 1/4;
       display: grid;
       grid-template-columns: 2fr 0.5fr 0.5fr 0.8fr 2fr;
@@ -165,6 +165,95 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+    }
+  }
+  .topMenuDiv {
+    grid-column: 1/4;
+    width: 100vw;
+    height: 50vh;
+    background-image: url(./mahyar-motebassem-pGA4zHvpo5E-unsplash.jpg);
+    background-size: cover;
+    background-position: 50%;
+  }
+  .topMenuDiv1 {
+    grid-column: 1/4;
+    width: 100vw;
+    height: 50vh;
+    background-image: url(./crew-szCvt1gP2d4-unsplash.jpg);
+    background-size: cover;
+    background-position: 50%;
+  }
+  .joinDiv {
+    height: 70vh;
+    background-color: #fff;
+    grid-column: 1/4;
+    display: grid;
+    grid-template-rows: 2fr 3fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
+    place-items: center;
+    h1 {
+      grid-column: 2/3;
+      font-family: "Gotham Medium";
+      text-transform: uppercase;
+      letter-spacing: 10px;
+      text-align: center;
+    }
+    h3 {
+      grid-column: 2/3;
+      font-family: "Gotham Extra-Light";
+      text-align: center;
+      line-height: 2rem;
+    }
+  }
+  .secondMenuDiv {
+    grid-column: 1/4;
+    width: 100vw;
+    // height: 100vh;
+    background-color: #fff;
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+    place-items: center;
+    padding-bottom: 4rem;
+  }
+  .secondDivH1 {
+    font-family: "Gotham Medium";
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-align: center;
+  }
+  .menuContainer {
+    width: 80vw;
+    border: 15px solid #ae896f;
+  }
+  .mainLogoContainer {
+    margin-top: 2rem;
+    background-color: rgb(241, 241, 241);
+  }
+  .mainMenuLogo {
+    padding: 1rem;
+    font-family: "Gotham Light";
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .mainMenuGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, minmax(150px, 1fr));
+    padding: 2rem;
+    gap: 2rem;
+  }
+  .menuItemSpan {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menuItem {
+    font-family: "Gotham Light";
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-bottom: 1px solid rgb(205, 205, 205);
+    h4 {
+      color: #ae896f;
     }
   }
 }

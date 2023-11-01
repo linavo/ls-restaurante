@@ -4,9 +4,17 @@ import image3 from "./ivan-torres-MQUqbmszGGM-unsplash.jpg";
 import image4 from "./saahil-khatkhate-kfDsMDyX1K0-unsplash.jpg";
 import image5 from "./saundarya-srinivasan-60nzTP7_hMQ-unsplash.jpg";
 import githubLogo from "./github-mark/github-mark.png";
+import { addMenu } from "./addMenu";
+import { addJoin } from "./addJoin";
 
 function addContent() {
   let body = document.querySelector("#content");
+  let lastChild = body.lastElementChild;
+  while (lastChild) {
+    body.removeChild(lastChild);
+    lastChild = body.lastElementChild;
+  }
+
   let menu = document.createElement("div");
 
   menu.classList.add("menu");
@@ -27,9 +35,15 @@ function addContent() {
   home.textContent = "Home";
   menuList.textContent = "Menu";
   join.textContent = "Join Our Team";
+
   home.classList.add("menuList");
   menuList.classList.add("menuList");
   join.classList.add("menuList");
+
+  home.classList.add("homeTab");
+  menuList.classList.add("menuTab");
+  join.classList.add("joinTab");
+
   formatMenuBar.appendChild(home);
   formatMenuBar.appendChild(menuList);
   formatMenuBar.appendChild(join);
@@ -111,19 +125,27 @@ function addContent() {
   const footer2AndGitPic = document.createElement("div");
   const githubLink = document.createElement("a");
 
-  githubLink.href = "testing";
+  githubLink.href = "https://github.com/linavo/ls-restaurante";
+  githubLink.target = "_blank";
   footer2AndGitPic.classList.add("footerSpan");
   githubPic.src = githubLogo;
   githubPic.classList.add("github");
   footerLogo1.textContent = "L's Restaurante";
   footerLogo2.textContent = "Lina Vo © 2023";
 
+  githubLink.appendChild(githubPic);
   footer2AndGitPic.appendChild(footerLogo2);
-  footer2AndGitPic.appendChild(githubPic);
+  footer2AndGitPic.appendChild(githubLink);
   footer.appendChild(footerLogo1);
   footer.appendChild(footer2AndGitPic);
 
   body.appendChild(footer);
+
+  let menuTab = document.querySelector(".menuTab");
+  menuTab.addEventListener("click", addMenu);
+
+  let joinTab = document.querySelector(".joinTab");
+  joinTab.addEventListener("click", addJoin);
 }
 
 export { addContent };
