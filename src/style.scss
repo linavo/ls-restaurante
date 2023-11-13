@@ -24,6 +24,7 @@
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   .div2 {
+    padding: 5rem 0;
     margin-top: 10rem;
     grid-column: 1/4;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.408);
@@ -52,6 +53,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(100px, 322px));
       gap: 0.5rem;
+      padding-bottom: 5rem;
       .column1,
       .column2 {
         display: flex;
